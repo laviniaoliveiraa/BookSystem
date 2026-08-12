@@ -23,6 +23,21 @@ elif opcao == 6:
     ordenar()
 elif opcao == 7:
     break
+def cadastrar():
+    titulo = str(input("Diga o título do livro: "))
+    autor = str(input("Diga o autor do livro: "))
+    ano = int(input("Diga o ano de publicação do livro: "))
+    codigo_isbn = int(input("Diga o códido ISBN: "))
+    status = "disponível"
+    livro = {
+        "titulo": titulo, 
+        "autor": autor,
+        "ano": ano,
+        "isbn": codigo_isbn,
+        "status": status,
+        
+    }
+    livros.append(livro)
     
     
 
