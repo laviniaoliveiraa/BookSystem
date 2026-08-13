@@ -26,6 +26,21 @@ def menu_principal():
         elif opcao == 7:
             break 
 
+        def cadastrar():
+            titulo = str(input("Diga o título do livro: "))
+            autor = str(input("Diga o nome do autor: "))
+            ano = int(input("Diga o ano de publicação: "))
+            codigo_isbn = int(input("Digite o código ISBN do livro: "))
+            status = "disponivel"
+            livro = {
+                "Título": titulo,
+                "Autor": autor,
+                "Ano": ano,
+                "Código": codigo_isbn,
+                "Status": status,
+            }
+            livros.append(livro)
+
         
 
         
