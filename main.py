@@ -53,6 +53,18 @@ def menu_principal():
                             return
                         print("Livro não identificado")
 
+                        def devolucao():
+                            codigo_isbn = int(input("Digite o código ISBN do livro: "))
+                            for livro in livros: 
+                                if livro["isbn"] == codigo_isbn:
+                                    if livro["status"] == "emprestado":
+                                        livro["status"] = "disponivel" 
+                                        print("Livro devolvido com sucesso")
+                                    elif livro["status"] == "disponivel":
+                                        print("Esse livro não estava emprestado") 
+                                        return 
+                                    print("Livro não identificado") 
+
         
 
         
