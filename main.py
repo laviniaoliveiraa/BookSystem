@@ -120,6 +120,21 @@ def menu_principal():
                                                                                     livros[i], livros[menor] = livros[menor], livros[i] 
                                                                                     print("Lista ordenda com sucesso")
 
+                                                                                    def salvar_livros():
+                                                                                        arquivo = open("livros.csv", "w")
+                                                                                        for livro in livros:
+                                                                                            arquivo.write(livro["titulo"])
+                                                                                            arquivo.write(",")
+                                                                                        arquivo.write(livro["autor"])
+                                                                                        arquivo.write(",") 
+                                                                                        arquivo.write(livro["ano"]) 
+                                                                                        arquivo.write(",")
+                                                                                        arquivo.write(livro["codigo_isbn"])
+                                                                                        arquivo.write(",") 
+                                                                                        arquivo.write(livro["status"])
+                                                                                        arquivo.write("\n") 
+                                                                                        arquivo.close()
+
         
 
         
