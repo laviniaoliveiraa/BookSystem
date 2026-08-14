@@ -41,6 +41,18 @@ def menu_principal():
             }
             livros.append(livro)
 
+            def emprestar():
+                codigo_isbn = int(input("Diga o código ISBN do livro: "))
+                for livro in livros:
+                    if livro["isbn"] == codigo_isbn:
+                        if livro["status"] == "disponivel":
+                            livro["status"] = "emprestado"
+                            print("Livro emprestado com sucesso")
+                        elif livro["status"] == "emprestado":
+                            print("Esse livro já foi emprestado")
+                            return
+                        print("Livro não identificado")
+
         
 
         
