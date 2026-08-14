@@ -65,6 +65,18 @@ def menu_principal():
                                         return 
                                     print("Livro não identificado") 
 
+                                    def listar():
+                                        if livros == []:
+                                            print("Nenhum livro cadastrado")
+                                            return 
+                                        for livro in livros:
+                                            print("Título:", livro["titulo"])
+                                            print("Autor:", livro["autor"])
+                                            print("Ano:", livro["ano"])
+                                            print("Código ISBN:", livro["codigo_isbn"])
+                                            print("Status:", livro["status"] )
+                                            print("------------------------------") 
+
         
 
         
