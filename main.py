@@ -77,6 +77,28 @@ def menu_principal():
                                             print("Status:", livro["status"] )
                                             print("------------------------------") 
 
+                                            def buscar():
+                                                while True:
+                                                    print("-------CAMPO DE BUSCA-------")
+                                                    print("1- Buscar por título")
+                                                    print("2- Buscar de autor")
+                                                    print("3- Voltar")
+                                                    opcao = int(input("Escolha uma opcao: "))
+                                                    if opcao == 3:
+                                                        break 
+                                                    termo = str(input("Digite o termo que deseja buscar: "))
+                                                    encontrou = False 
+                                                    for livro in livros:
+                                                        if opcao == 1 and livro["titulo"] == termo:
+                                                            print("Título:", livro["titulo"])
+                                                            print("Autor:", livro["autor"])
+                                                            print("Ano:", livro["ano"])
+                                                            print("Código ISBN:", livro["codigo_isbn"])
+                                                            print("Status":, livro["status"])
+                                                            encontrou = True 
+                                                            if encontrou == False:
+                                                                print("Nenhum livro encontrado") 
+
         
 
         
