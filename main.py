@@ -99,6 +99,27 @@ def menu_principal():
                                                             if encontrou == False:
                                                                 print("Nenhum livro encontrado") 
 
+                                                                def ordenar():
+                                                                    print("1- Ordenar por título")
+                                                                    print("2- Ordenar por autor")
+                                                                    print("3- Ordenar por Ano")
+                                                                    opcao =  int(input("Escolha uma opção: "))
+                                                                    if opcao == 1:
+                                                                        campo = "titulo" 
+                                                                    elif opcao == 2:
+                                                                        campo = "autor" 
+                                                                    elif opcao == 3:
+                                                                        campo = "ano"
+
+                                                                        tamanho = len(livros)
+                                                                        for i in range(tamanho):
+                                                                            menor = i 
+                                                                            for j in range(i + 1, tamanho):
+                                                                                if livros [j][campo] < livros[menor][campo]:
+                                                                                    menor = j 
+                                                                                    livros[i], livros[menor] = livros[menor], livros[i] 
+                                                                                    print("Lista ordenda com sucesso")
+
         
 
         
